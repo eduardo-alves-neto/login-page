@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import '../../../styles/variables.scss';
 
 main {
   display: flex;
@@ -17,14 +17,30 @@ main {
 
   .main-section {
     gap: 8px;
-
+    background-color: $gray-bg-secondary;
     flex-grow: 1;
-    background-color: $gray-bg;
+
+    h1,
+    img {
+      display: block;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-height: 500px;
+    }
   }
 
   .form-section {
-    flex-grow: 0.3;
     padding: 0 35px;
+    min-width: 400px;
+    flex-grow: 0.4;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     img {
       margin-bottom: 30px;

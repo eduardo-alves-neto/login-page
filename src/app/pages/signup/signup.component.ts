@@ -53,7 +53,7 @@ export class SignupComponent {
     });
   }
 
-  submit() {
+  submit(): void {
     this.loginService
       .login(this.signupForm.value.email, this.signupForm.value.password)
       .subscribe({
@@ -65,7 +65,7 @@ export class SignupComponent {
       });
   }
 
-  navigate() {
+  navigate(): void {
     this.router.navigate(['signup']);
   }
 }
